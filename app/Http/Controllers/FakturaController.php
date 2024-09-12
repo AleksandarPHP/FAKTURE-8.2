@@ -115,7 +115,7 @@ class FakturaController extends Controller
             'method_of_payment' => ['required', 'string', 'max:191'],
             'operator' => ['required', 'string', 'max:191'],
             'reference_number' => ['nullable', 'string', 'max:191'],
-            'jir' => ['nullable', 'string', 'max:191'],
+            'jir' => ['required', 'numeric', 'max:191'],
             'notes' => ['required', 'string', 'max:191'],
             'email_text' => ['required', 'string', 'max:191'],
             'client_company' => ['required', 'string', 'max:191'],
@@ -379,8 +379,8 @@ class FakturaController extends Controller
         $newInvoice->sent = 0;
         $newInvoice->save();
     
-        if (is_array($originalInvoice->items)) {
-            foreach ($originalInvoice->items as $item) {
+        if (is_array($originalInvoice->goods)) {
+            foreach ($originalInvoice->goods as $item) {
                 $newItem = $item->replicate();
                 $newItem->invoice_id = $newInvoice->id;
                 $newItem->save();

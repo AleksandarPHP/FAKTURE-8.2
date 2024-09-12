@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use Image;
+use Intervention\Image\Laravel\Facades\Image;
 use Config;
 
 class UsersController extends Controller

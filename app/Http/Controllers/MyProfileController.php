@@ -11,7 +11,7 @@ use App\Models\MailSettings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use Image;
+use Intervention\Image\Laravel\Facades\Image;
 
 class MyProfileController extends Controller
 {
