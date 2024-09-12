@@ -1,0 +1,49 @@
+// variables
+$font: 'Montserrat', sans-serif;
+$primary: #4a8fac;
+$primary2: #294E60;
+$light: #deedf1;
+$gray: #F2F4F9;
+$lightBlue: #f1f3f5;
+// mixins
+@mixin transition($time) {
+  -webkit-transition: $time;
+  -moz-transition: $time;
+  -ms-transition: $time;
+  transition: $time;
+}
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+@mixin text-wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin lg() {
+  @media only screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+@mixin md() {
+  @media only screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+@mixin sm() {
+  @media only screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+@mixin xs() {
+  @media only screen and (max-width: 575.98px) {
+    @content;
+  }
+}
