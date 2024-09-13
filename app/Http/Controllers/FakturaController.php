@@ -372,20 +372,16 @@ class FakturaController extends Controller
     public function copy($id)
     {
         $originalInvoice = Invoice::findOrFail($id);
+        $previousInvoice = Invoice::orderBy('created_at', 'desc')->first();
+        if ($previousInvoice && Carbon::parse($previousInvoice->created_at)->format('Y') !== Carbon::today()->format('Y')) {
+            $previousInvoice->inv_number = 0;
+        }
     
         $newInvoice = $originalInvoice->replicate();
-        $newInvoice->inv_number = $originalInvoice->inv_number;
+        $newInvoice->inv_number = $previousInvoice->inv_number + 1;
         $newInvoice->status = 0;
         $newInvoice->sent = 0;
         $newInvoice->save();
-    
-        if (is_array($originalInvoice->goods)) {
-            foreach ($originalInvoice->goods as $item) {
-                $newItem = $item->replicate();
-                $newItem->invoice_id = $newInvoice->id;
-                $newItem->save();
-            }
-        }
     
         session()->flash('success', 'Faktura uspešno kopirana.');
     
