@@ -2060,7 +2060,7 @@ hr {
 }
 .add-new-invoice .col-md-6.offset-md-4 {
   padding: 20px;
-  background-color: #a0c6d6;
+  background-color: #4e6169;
   border: 1px solid #63cdf4;
 }
 .add-new-invoice .col-md-6.offset-md-4 table {
@@ -2092,7 +2092,7 @@ hr {
 .invoice-table tr {
   margin: 0 10px;
   color: #fff;
-  background-color: #a0c6d6;
+  background-color: #4e6169;
   text-align: center;
   border-bottom: 2px solid #fff;
 }
