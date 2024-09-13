@@ -22,7 +22,7 @@ class Repeat_invoice extends Model
         'client_company',
         'jib',
         'client_pdv',
-        'client_adderss',
+        'client_address',
         'client_city',
         'client_email',
         'goods',

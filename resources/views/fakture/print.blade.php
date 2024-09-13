@@ -168,7 +168,7 @@
                <div class="print-info-right">
                    <p><strong>{{ __('Client') }}: </strong></p>
                    <p>{{$inv->client_company}}</p>
-                   <p>{{ $inv->client_adderss }}</p>
+                   <p>{{ $inv->client_address }}</p>
                    <p>{{ $inv->client_postal_code }} {{ $inv->client_city }}</p>
                    <p>JIB: {{ $inv->jib }}</p>
                </div>

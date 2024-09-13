@@ -38,7 +38,7 @@ class CreateInvoicesTable extends Migration
             $table->string('client_company')->nullable();
             $table->integer('jib')->nullable();
             $table->integer('client_pdv')->nullable();
-            $table->string('client_adderss')->nullable();
+            $table->string('client_address')->nullable();
             $table->string('client_city')->nullable();
             $table->string('client_postal_code')->nullable();
             $table->string('client_email')->nullable();

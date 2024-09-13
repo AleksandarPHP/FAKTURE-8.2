@@ -101,7 +101,7 @@ class RepeatInvController extends Controller
             'client_company' => ['required', 'string', 'max:191'],
             'jib' => ['required', 'string', 'max:191'],
             'client_pdv' => ['required', 'string', 'max:191'],
-            'client_adderss' => ['required', 'string', 'max:191'],
+            'client_address' => ['required', 'string', 'max:191'],
             'client_city' => ['required', 'string', 'max:191'],
             'client_postal_code' => ['required', 'string', 'max:191'],
             'client_email' => ['required', 'string', 'max:191'],
@@ -144,7 +144,7 @@ class RepeatInvController extends Controller
             'client_company' => $request->client_company,
             'jib' => $request->jib, 
             'client_pdv' => $request->client_pdv,
-            'client_adderss' => $request->client_adderss,
+            'client_address' => $request->client_address,
             'client_city' => $request->client_city,
             'client_postal_code' => $request->client_postal_code,
             'client_individual' => $request->client_individual ? $request->client_individual : 0,
@@ -196,7 +196,7 @@ class RepeatInvController extends Controller
             'client_company' => ['required', 'string', 'max:191'],
             'jib' => ['nullable', 'string', 'max:191'],
             'client_pdv' => ['nullable', 'string', 'max:191'],
-            'client_adderss' => ['nullable', 'string', 'max:191'],
+            'client_address' => ['nullable', 'string', 'max:191'],
             'client_city' => ['nullable', 'string', 'max:191'],
             'client_individual' => ['nullable', 'numeric'],
             'client_postal_code' => ['nullable', 'string', 'max:191'],
@@ -230,7 +230,7 @@ class RepeatInvController extends Controller
         $rep_inv->jib = $request->jib;
         $rep_inv->client_individual = $request->client_individual ? $request->client_individual : 0;
         $rep_inv->client_pdv = $request->client_pdv;
-        $rep_inv->client_adderss = $request->client_adderss;
+        $rep_inv->client_address = $request->client_address;
         $rep_inv->client_city = $request->client_city;
         // $rep_inv->client_postal_code = $request->client_postal_code;
         $rep_inv->client_email = $request->client_email;

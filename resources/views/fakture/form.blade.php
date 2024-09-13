@@ -170,7 +170,7 @@
                         </div>
                         <div class="col-md-12 col-full-xl">
                             <label for="">Adresa firme klijenta:</label>
-                            <input type="text" class="default_input" name="client_adderss" id="client_address" value="{{old('client_address', $invoice->client_adderss)}}"/>
+                            <input type="text" class="default_input" name="client_address" id="client_address" value="{{old('client_address', $invoice->client_address)}}"/>
                         </div>
                         <div class="col-md-12 col-full-xl">
                             <label for="">Grad klijenta:</label>

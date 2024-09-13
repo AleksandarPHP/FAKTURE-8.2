@@ -29,7 +29,7 @@ class CreateRepeatInvoicesTable extends Migration
             $table->string('client_company');
             $table->string('jib');
             $table->integer('client_pdv');
-            $table->string('client_adderss');
+            $table->string('client_address');
             $table->string('client_city');
             $table->string('client_email');
             $table->integer('client_individual')->nullable();

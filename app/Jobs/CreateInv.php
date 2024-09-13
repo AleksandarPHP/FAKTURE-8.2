@@ -7,9 +7,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use App\Repeat_invoice;
+use App\Models\Repeat_invoice;
 use Carbon\Carbon;
-use App\Invoice;
+use App\Models\Invoice;
 
 class CreateInv implements ShouldQueue
 {
@@ -62,7 +62,7 @@ class CreateInv implements ShouldQueue
                 'client_company' => $rep_invoice->client_company,
                 'jib' => $rep_invoice->jib, 
                 'client_pdv' => $rep_invoice->client_pdv,
-                'client_adderss' => $rep_invoice->client_adderss,
+                'client_address' => $rep_invoice->client_address,
                 'client_city' => $rep_invoice->client_city,
                 'client_postal_code' => $rep_invoice->client_postal_code,
                 'client_email' => $rep_invoice->client_email,

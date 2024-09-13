@@ -29,7 +29,7 @@ class Invoice extends Model
         'client_company',
         'jib',
         'client_pdv',
-        'client_adderss',
+        'client_address',
         'client_postal_code',
         'client_city',
         'client_email',

@@ -121,7 +121,7 @@ class FakturaController extends Controller
             'client_company' => ['required', 'string', 'max:191'],
             'jib' => ['nullable', 'string', 'max:191'],
             'client_pdv' => ['nullable', 'string', 'max:191'],
-            'client_adderss' => ['nullable', 'string', 'max:191'],
+            'client_address' => ['nullable', 'string', 'max:191'],
             'client_city' => ['nullable', 'string', 'max:191'],
             'client_postal_code' => ['nullable', 'string', 'max:191'],
             'client_email' => ['required', 'string', 'max:191'],
@@ -162,7 +162,7 @@ class FakturaController extends Controller
             'client_company' => $request->client_company,
             'jib' => $request->jib, 
             'client_pdv' => $request->client_pdv,
-            'client_adderss' => $request->client_adderss,
+            'client_address' => $request->client_address,
             'client_city' => $request->client_city,
             'client_postal_code' => $request->client_postal_code,
             'client_email' => $request->client_email,
@@ -218,7 +218,7 @@ class FakturaController extends Controller
             'client_company' => ['required', 'string', 'max:191'],
             'jib' => ['nullable', 'string', 'max:191'],
             'client_pdv' => ['nullable', 'string', 'max:191'],
-            'client_adderss' => ['nullable', 'string', 'max:191'],
+            'client_address' => ['nullable', 'string', 'max:191'],
             'client_email' => ['required', 'string', 'max:191'],
             'client_individual' => ['nullable'],
             'suma' => ['nullable', 'string', 'max:30'],
@@ -256,7 +256,7 @@ class FakturaController extends Controller
         $inv->client_company = $request->client_company;
         $inv->jib = $request->jib;
         $inv->client_pdv = $request->client_pdv;
-        $inv->client_adderss = $request->client_adderss;
+        $inv->client_address = $request->client_address;
         $inv->client_city = $request->client_city;
         $inv->client_postal_code = $request->client_postal_code;
         $inv->client_email = $request->client_email;
