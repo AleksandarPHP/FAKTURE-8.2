@@ -100,15 +100,15 @@
                       <td class="text-center"><b> {{$inv->id}}</b></td>
                       <td class="text-center"><b style="text-transform:uppercase;"> {{$inv->client_company}}  </b></td>
                       <td class="text-center"><span><span>{{$inv->date}}</span></span></td>
-                      <td class="text-center"><a href="{{ url('repeat-fakture/'.$inv->id.'/edit') }}"><i class="fa-solid fa-pen-to-square" style="color: #4a8fac;"></i></a></td>
+                      <td class="text-center"><a href="{{ url('repeat-fakture/'.$inv->id.'/edit') }}"><i class="fa-solid fa-pen-to-square" style="color: #63cdf4;"></i></a></td>
                       <td class="text-center">
                           <a href="{{ route('fakture.copy', $inv->id) }}">
-                            <i class="fa-solid fa-copy" style="color: #4a8fac;"></i>
+                            <i class="fa-solid fa-copy" style="color: #63cdf4;"></i>
                           </a>
                       </td>
                       <td style="text-align: center">
                         <a href="#" class="" onclick="event.preventDefault(); if(confirm('Da li ste sigurni?')) document.getElementById('delete-form-{{ $inv->id }}').submit();">
-                          <i class="fa-solid fa-trash" style="color: #4a8fac;"></i>
+                          <i class="fa-solid fa-trash" style="color: #63cdf4;"></i>
                         </a>
                         <form id="delete-form-{{ $inv->id }}" action="{{ url('repeat-fakture/'.$inv->id) }}" method="POST" style="display: none;">
                           @csrf

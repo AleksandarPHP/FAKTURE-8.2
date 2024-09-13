@@ -36,9 +36,9 @@
                             <td><input style="display: none" type="checkbox" name="id[]" value="{{ $client->id }}" /> </td>
                             <td> <b style="text-transform: uppercase">{{ $client->first_name }} </b> </td>
                             <td>{{ $client->pdv_id }}<span style="white-space: nowrap"></span></td>
-                            <td><a href="{{ url('klijenti/'.$client->id.'/edit') }}"><i class="fa-solid fa-pen-to-square" style="color: #4a8fac;"></i></td>
-                            <td><i class="fa-solid fa-copy" style="color: #4a8fac;"></i></td>
-                            <td><a href="#" onclick="event.preventDefault();if(confirm('Da li ste sigurni?'))document.getElementById('delete-form').submit();"><i class="fa-solid fa-trash" style="color: #4a8fac;"></i></a></td>
+                            <td><a href="{{ url('klijenti/'.$client->id.'/edit') }}"><i class="fa-solid fa-pen-to-square" style="color: #63cdf4;"></i></td>
+                            <td><i class="fa-solid fa-copy" style="color: #63cdf4;"></i></td>
+                            <td><a href="#" onclick="event.preventDefault();if(confirm('Da li ste sigurni?'))document.getElementById('delete-form').submit();"><i class="fa-solid fa-trash" style="color: #63cdf4;"></i></a></td>
                             <form id="delete-form" action="{{ url('klijenti/'.$client->id)}} " method="POST" style="display: none;">
                               @csrf
                               @method('DELETE')

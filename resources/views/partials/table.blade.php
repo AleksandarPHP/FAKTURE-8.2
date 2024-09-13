@@ -38,7 +38,7 @@
                   <td class="text-center" scope="col">{{$item['price']}}</td>
                   <td class="text-center" scope="col">{{$item['quantity']}}</td>
                   <td class="text-center" scope="col">{{$item['unit_measurement']}}</td>
-                  <td class="text-center"><i class="fa-solid fa-trash" data-row-id="{{$key}}" style="cursor: pointer; color: #4a8fac;"></i></td>
+                  <td class="text-center"><i class="fa-solid fa-trash" data-row-id="{{$key}}" style="cursor: pointer; color: #63cdf4;"></i></td>
                 </tr>
                 @endforeach
               @else

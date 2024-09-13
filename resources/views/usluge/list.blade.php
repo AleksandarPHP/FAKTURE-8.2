@@ -80,11 +80,11 @@
                         <!--<td><input style="display: none" type="checkbox" name="id[]" value="{{ $item->id }}"></td>-->
                         <td><b style="text-transform:uppercase;">{{ $item->name }}</b></td>
                         <td><span style="white-space: nowrap;">{{ $item->price }} KM</span></td>
-                        <td><a href="{{ url('usluge/'.$item->id.'/edit') }}"><i class="fa-solid fa-pen-to-square" style="color: #4a8fac;"></i></a></td>
-                        <td><i class="fa-solid fa-copy" style="color: #4a8fac;"></i></td>
+                        <td><a href="{{ url('usluge/'.$item->id.'/edit') }}"><i class="fa-solid fa-pen-to-square" style="color: #63cdf4;"></i></a></td>
+                        <td><i class="fa-solid fa-copy" style="color: #63cdf4;"></i></td>
                         <td>
                           <a href="#" class="" onclick="event.preventDefault(); if(confirm('Da li ste sigurni?')) document.getElementById('delete-form-{{ $item->id }}').submit();">
-                            <i class="fa-solid fa-trash" style="color: #4a8fac;"></i>
+                            <i class="fa-solid fa-trash" style="color: #63cdf4;"></i>
                           </a>
                           <form id="delete-form-{{ $item->id }}" action="{{ url('usluge/'.$item->id) }}" method="POST" style="display: none;">
                             @csrf

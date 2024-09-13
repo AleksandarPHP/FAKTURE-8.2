@@ -47,14 +47,14 @@
                                         <td>
                                             <a
                                                 href="{{ url('kategorije/'.$category->id.'/edit') }}"
-                                                ><i class="fa-solid fa-pen-to-square" style="color: #4a8fac;"></i></a>
+                                                ><i class="fa-solid fa-pen-to-square" style="color: #63cdf4;"></i></a>
                                         </td>
                                         <td>
-                                            <i class="fa-solid fa-copy" style="color: #4a8fac;"></i>
+                                            <i class="fa-solid fa-copy" style="color: #63cdf4;"></i>
                                         </td>
                                         <td>
                                             <a href="#" class="" onclick="event.preventDefault(); if(confirm('Da li ste sigurni?')) document.getElementById('delete-form-{{ $category->id }}').submit();">
-                                                <i class="fa-solid fa-trash" style="color: #4a8fac;"></i>
+                                                <i class="fa-solid fa-trash" style="color: #63cdf4;"></i>
                                               </a>
                                               <form id="delete-form-{{ $category->id }}" action="{{ url('kategorije/'.$category->id) }}" method="POST" style="display: none;">
                                                 @csrf

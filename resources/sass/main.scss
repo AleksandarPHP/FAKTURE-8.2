@@ -1070,7 +1070,7 @@ hr {
 }
 .select2-container--default.select2-container--focus
     .select2-selection--multiple {
-    border-color: #4a8fac;
+    border-color: #63cdf4;
 }
 .select2-container--default
     .select2-selection--multiple
@@ -1890,8 +1890,8 @@ hr {
 
     .col-md-6.offset-md-4 {
         padding: 20px;
-        background-color: lighten(#4a8fac, 25%);
-        border: 1px solid #4a8fac;
+        background-color: lighten(#63cdf4, 25%);
+        border: 1px solid #63cdf4;
         table {
             width: 100%;
             padding: 20px;
@@ -1905,10 +1905,10 @@ hr {
         margin: 0 10px;
 
         color: #fff;
-        background-color: lighten(#4a8fac, 25%);
+        background-color: lighten(#63cdf4, 25%);
 
         &:first-of-type {
-            background-color: #4a8fac;
+            background-color: #63cdf4;
         }
 
         td {

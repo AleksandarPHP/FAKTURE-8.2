@@ -144,7 +144,7 @@
                             >@if(!$editing){{ old('notes', $mail_settings->text)}} @else {{ old('notes', $invoice->notes) }} @endif</textarea>
                         </div>
                         <div class="col-md-12 col-full-xl">
-                            <h2 style="color: #4a8fac"><b>LISTA KLIJENATA</b></h2>
+                            <h2 style="color: #63cdf4"><b>LISTA KLIJENATA</b></h2>
                             <select name="lista_klijenata" class="default_select" data-live-search="true" id="lista_klijenata">
                                 <option value="----">----</option>
                                 @if($clients->count() > 0)
@@ -187,7 +187,7 @@
                         <input type="hidden" class="default_input" name="client_individual" id="client_individual" value="{{old('client_individual', $invoice->client_individual)}}"/>
                     </div>
                     <div class="col-md-7 col-full-xl ">
-                        <h2 style="color:#4a8fac;"><b>POPIS USLUGA</b></h2>
+                        <h2 style="color:#63cdf4;"><b>POPIS USLUGA</b></h2>
                         <div class="col-md-12 col-full-xl px-0">
                             @if (!$editing)
                                 @include('partials.table')
