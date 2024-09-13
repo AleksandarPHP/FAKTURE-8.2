@@ -11,7 +11,8 @@ use App\Models\MailSettings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Laravel\Facades\Image;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 
 class MyProfileController extends Controller
 {
@@ -99,6 +100,7 @@ class MyProfileController extends Controller
         $filename = null;
         $time = time();
         if($request->hasFile('image')) {
+
             $oldFile = $userDetail->image;
             if(!is_null($oldFile) && Storage::exists('public/company/'.$oldFile)) Storage::delete('public/company/'.$oldFile);
             if(!is_null($oldFile) && Storage::exists('public/company/res_'.$oldFile)) Storage::delete('public/company/res_'.$oldFile);
@@ -110,9 +112,15 @@ class MyProfileController extends Controller
                 $br++;
             }
                     
-            $originalImage = Image::make($request->image);
-            $imagePath = $request->image->storeAs('public/company', $filename);
-            Storage::put('public/company/res_'.$filename, $originalImage->fit(180,90)->encode()->__toString());
+            if($request->file('image')){
+                $manager = new ImageManager(new Driver());
+                $imagePath = $request->image->storeAs('public/company', $filename);
+                $img = $manager->read($request->image);
+                // $img = $img->resize(180,90)->save($imagePath);
+                Storage::put('public/company/res_'.$filename, $img->resize(180,height: 120)->encode()->__toString()) ;
+            }
+
+            // $originalImage = Image::make($request->image);
 
             $userDetail->image = $filename;
         } else if(!is_null($userDetail->image) && str_slug(trim($request->company_name)) != str_slug($request->company_name)) {
