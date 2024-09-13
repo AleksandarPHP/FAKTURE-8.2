@@ -66,7 +66,7 @@ class CreateInv implements ShouldQueue
                 'client_city' => $rep_invoice->client_city,
                 'client_postal_code' => $rep_invoice->client_postal_code,
                 'client_email' => $rep_invoice->client_email,
-                'suma' => $rep_invoice->sum,
+                'suma' => $rep_invoice->suma,
                 'goods' => $rep_invoice->goods,
                 'lang' => $rep_invoice->lang,
             ]);
