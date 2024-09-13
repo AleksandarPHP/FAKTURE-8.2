@@ -99,7 +99,7 @@
                     <tr>
                       <td class="text-center"><b> {{$inv->id}}</b></td>
                       <td class="text-center"><b style="text-transform:uppercase;"> {{$inv->client_company}}  </b></td>
-                      <td class="text-center"><span><span>{{$inv->date}}</span></span></td>
+                      <td class="text-center"><span><span>{{$inv->date_last_inv}}</span></span></td>
                       <td class="text-center"><a href="{{ url('repeat-fakture/'.$inv->id.'/edit') }}"><i class="fa-solid fa-pen-to-square" style="color: #63cdf4;"></i></a></td>
                       <td class="text-center">
                           <a href="{{ route('fakture.copy', $inv->id) }}">
