@@ -18,21 +18,23 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ url()->full() }}" />
-  <meta property="og:site_name" content="Finance Think" />
+  <meta property="og:site_name" content="Finance Soft4Tech" />
 
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:site" content="Finance Think" />
-  <meta name="twitter:creator" content="@itsystem.io" />
+  <meta name="twitter:site" content="Finance Soft4Tech" />
+  <meta name="twitter:creator" content="@soft4tech.com" />
   <meta name="twitter:url" content="{{ url()->full() }}" />
 
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <meta property="og:title" content="Finance Think" />
-  <meta name="twitter:title" content="Finance Think" />
-  <title>th!nk software solution Bijeljina</title>
-  <link href="{{ asset('assets/images/favicon.png') }}" rel="shortcut icon" type="image/x-icon" />
-  <!-- stylesheets -->
+  <meta property="og:title" content="Finance Soft4Tech" />
+  <meta name="twitter:title" content="Finance Soft4Tech" />
+  <title>Soft4Tech</title>
+  <link rel="icon" href="{{asset('assets/images/cropped-favicon-32x32.png')}}" sizes="32x32" />
+  <link rel="icon" href="{{asset('assets/images/cropped-favicon-192x192.png')}}" sizes="192x192" />
+  <link rel="apple-touch-icon" href="{{asset('assets/images/cropped-favicon-180x180.png')}}" />
+  <meta name="msapplication-TileImage" content="{{asset('assets/images/cropped-favicon-270x270.png')}}" />  <!-- stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
