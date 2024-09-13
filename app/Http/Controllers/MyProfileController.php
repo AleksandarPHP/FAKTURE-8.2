@@ -41,9 +41,9 @@ class MyProfileController extends Controller
                 $br++;
             }
                     
-            $originalImage = Image::make($request->image);
-            $imagePath = $request->image->storeAs('public/users', $filename);
-            Storage::put('public/users/res_'.$filename, $originalImage->fit(180,180)->encode()->__toString());
+            $manager = new ImageManager(new Driver());
+            $img = $manager->read($request->image);
+            Storage::put('public/users/res_'.$filename, $img->resize(180,180)->encode()->__toString());
 
             $user->image = $filename;
         } else if(!is_null($user->image) && str_slug(trim($request->first_name.' '.$request->last_name)) != str_slug($user->name)) {
@@ -116,11 +116,8 @@ class MyProfileController extends Controller
                 $manager = new ImageManager(new Driver());
                 $imagePath = $request->image->storeAs('public/company', $filename);
                 $img = $manager->read($request->image);
-                // $img = $img->resize(180,90)->save($imagePath);
                 Storage::put('public/company/res_'.$filename, $img->resize(180,height: 120)->encode()->__toString()) ;
             }
-
-            // $originalImage = Image::make($request->image);
 
             $userDetail->image = $filename;
         } else if(!is_null($userDetail->image) && str_slug(trim($request->company_name)) != str_slug($request->company_name)) {

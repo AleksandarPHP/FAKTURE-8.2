@@ -6,7 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Laravel\Facades\Image;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 use Config;
 
 class UsersController extends Controller
@@ -54,9 +55,10 @@ class UsersController extends Controller
                 $br++;
             }
                     
-            $originalImage = Image::make($request->image);
+            $manager = new ImageManager(new Driver());
+            $img = $manager->read($request->image);
             $imagePath = $request->image->storeAs('public/users', $filename);
-            Storage::put('public/users/res_'.$filename, $originalImage->fit(180,180)->encode()->__toString());
+            Storage::put('public/users/res_'.$filename, $img->resize(180,180)->encode()->__toString());
         }
 
         $user = User::create([
@@ -118,9 +120,10 @@ class UsersController extends Controller
                 $br++;
             }
                     
-            $originalImage = Image::make($request->image);
+            $manager = new ImageManager(new Driver());
+            $img = $manager->read($request->image);
             $imagePath = $request->image->storeAs('public/users', $filename);
-            Storage::put('public/users/res_'.$filename, $originalImage->fit(180,180)->encode()->__toString());
+            Storage::put('public/users/res_'.$filename, $img->resize(180,180)->encode()->__toString());
 
             $user->image = $filename;
         } else if(!is_null($user->image) && str_slug(trim($request->first_name.' '.$request->last_name)) != str_slug($user->name)) {
