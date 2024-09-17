@@ -13,8 +13,8 @@
   <meta property="og:description" content="" />
   <meta name="twitter:description" content="" />
 
-  <meta property="og:image" content="{{ asset('assets/images/share.jpg') }}"/>
-  <meta name="twitter:image" content="{{ asset('assets/images/share.jpg') }}" />
+  <meta property="og:image" content="{{ asset('assets/images/share.png') }}"/>
+  <meta name="twitter:image" content="{{ asset('assets/images/share.png') }}" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ url()->full() }}" />
