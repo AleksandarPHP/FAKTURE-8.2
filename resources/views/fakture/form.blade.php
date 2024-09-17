@@ -250,7 +250,7 @@
         const currentTimeString = `${hours}:${minutes}`;
 
         document.getElementById("dateInput").value = currentDateString;
-        document.getElementById("timeInput").value = currentTimeString;
+        // document.getElementById("timeInput").value = currentTimeString;
         document.getElementById("delivery_date").value = currentDateString;
     }
 

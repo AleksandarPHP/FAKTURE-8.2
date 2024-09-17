@@ -89,7 +89,6 @@ class FakturaController extends Controller
         $inv = Invoice::count();
         $userDetails = UserDetail::find(1);
         $previousInvoice = Invoice::orderBy('created_at', 'desc')->first();
-        // dd(Carbon::parse($previousInvoice->created_at)->format('Y'));
         if ($previousInvoice && Carbon::parse($previousInvoice->created_at)->format('Y') !== Carbon::today()->format('Y')) {
             $previousInvoice->inv_number = 0;
         }
@@ -100,6 +99,8 @@ class FakturaController extends Controller
 
     public function store(Request $request)
     {
+
+        dd($request->all());
         $request->validate([
             'lang' => ['required', 'string', 'max:191'],
             'type' => ['required', 'string', 'max:191'],
